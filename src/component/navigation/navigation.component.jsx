@@ -12,7 +12,7 @@ const Header=()=>
         <div className=" navbar" >
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li className="nav-item active">
-                    <Link className="nav-link" to="/home">Home <span class="sr-only">(current)</span></Link>
+                    <Link className="nav-link" to="/home">Home <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/about">About Us</Link>

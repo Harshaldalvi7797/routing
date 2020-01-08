@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Navigation from "./component/navigation/navigation";
-import {Route} from "react-router-dom";
+import {Route,Switch} from "react-router-dom";
 import Home from "./component/Home/home";
 import About from "./component/about/about";
 import Product from "./component/products/product";
+import Productdetails from "./component/product.details/productdetails";
 
 
 class App extends Component
@@ -13,11 +14,20 @@ class App extends Component
     return(
       <React.Fragment>
              <Navigation/>
+            
              <div className="container">
-               <Route path="/home" component={Home}/>
+
+             <Switch>
+             <Route path="/home" component={Home}/>
                <Route path="/about" component={About}/>
                <Route path="/product"  component={Product}/>
-               <Route path="/" exact component={Home}/>
+               <Route path="/productdetails/:id" component={Productdetails}/>
+               <Route path="/"  exact component={Home} />
+             
+
+               
+</Switch>
+              
               
              </div>
 
